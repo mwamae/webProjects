@@ -1,0 +1,22 @@
+{
+  "name": "karma",
+  "version": "1.0.0",
+  "description": "karma",
+  "main": "karma.conf.js",
+  "dependencies": {
+    "jasmine-core": "^2.3.4",
+    "first": "^0.0.3",
+    "karma-chrome-launcher": "^0.1.12",
+    "karma-firefox-launcher": "^0.1.6",
+    "karma": "^0.12.32",
+    "karma-jasmine": "^0.3.5",
+    "karma-ie-launcher": "^0.1.5",
+    "karma-safari-launcher": "^0.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "ok"
+  },
+  "author": "Michale",
+  "license": "ISC"
+}
