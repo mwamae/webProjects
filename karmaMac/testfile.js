@@ -17,3 +17,5 @@ describe("app", function(){
         expect($scope.fullName()).toBe("michaelwamae");
     });
     });
+
+  
