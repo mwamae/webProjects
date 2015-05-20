@@ -10,7 +10,6 @@ app.controller('myCtrl', function($scope){
         };
         
         $scope.remove = function(index) {
-            alert(index+" "+$scope.data.index);
         $scope.data.splice(index, 1);
     };
 });
