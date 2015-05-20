@@ -2,24 +2,27 @@
 <html>
     <head>
         <title>Contacts App</title>
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
         <script type="text/javascript" src="controller.js"></script>
     </head>
     <body ng-app="myApp" ng-controller="myCtrl">
-        <table>
-           <tr><td> First Name :</td><td> <input type="text"  ng-model="firstName"> <br /></td></tr>
-            <tr><td>Last Name :</td><td> <input type="text" ng-model = "lastName"> <br /></td></tr>
-            <tr><td>Phone : </td><td> <input type= "text"  ng-model = "cellPhone"> </br></td></tr>
-            <tr><td><button class="btn btn-success" ng-click = "submitForm()">New</button></td></tr>
-        </table>
-       <table>
+        <div class="container">
+        <div class="row">
+           <div class="col-xs-12 col-sm-4 col-md-3">First Name :</td><td> <input type="text"  ng-model="firstName"> </div> 
+            <div class="col-xs-12 col-sm-4 col-md-3">Last Name :</td><td> <input type="text" ng-model = "lastName"> </div>
+            <div class="col-xs-12 col-sm-4 col-md-3">Phone : </td><td> <input type= "text"  ng-model = "cellPhone"> </div>
+            <div class="col-xs-12"><button class="btn btn-success" ng-click = "submitForm()">New</button></div>
+        </div>
+       <table class = "table table-striped">
        <tr ng-repeat="x in data">
         <td >{{x.index}}</td>
        <td >{{x.firstName}}</td>
        <td >{{x.lastName}}</td>
        <td >{{x.cellPhone}}</td>
-       <td ><button ng-click="remove(x.index)">Delete</button></td>
+       <td ><button class="btn btn-danger btn-small" ng-click="remove(x.index)">Delete</button></td>
        </tr>
        </table>
+       </div>
     </body>
 </html>
