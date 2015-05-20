@@ -1,0 +1,11 @@
+{
+  "name": "angularjs2",
+  "version": "1.0.0",
+  "description": "angualarjs 2",
+  "main": "karma.conf.js",
+  "scripts": {
+    "test": "Ok"
+  },
+  "author": "Michael",
+  "license": "ISC"
+}
