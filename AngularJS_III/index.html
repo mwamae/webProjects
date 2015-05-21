@@ -1,0 +1,47 @@
+<!Doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+    <title>Receiving Data Using HTTP</title>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+  <script type="text/javascript" src="controller.js"></script>
+</head>
+<body>
+<div ng-controller="theController">
+    
+    <div class="container">
+        <h1>Get Request From a Json file.</h1>
+    <form>
+    <label>First Name</label> 
+        <input type="text" name="firstname" ng-model="firstName">
+    <label>Last Name</label> 
+        <input type="text" name="lastname" ng-model="lastName">
+    <label>Email</label> 
+        <input type="email" name="email" ng-model="email">
+    <label>Telephone</label> 
+        <input type="text" name="telephone" ng-model="telephone">
+         <button class = "btn btn-success" ng-click="sendData()">Save</button>
+    </form>
+<table class="table table-striped">
+<thead> 
+<tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Email</th>
+    <th>Telephone</th>
+</tr>
+</thead>
+<tbody>
+<tr ng-repeat="contact in contacts">
+    <td>{{ contact.firstName }}</td>
+    <td>{{ contact.lastName }}</td>
+    <td>{{ contact.email }}</td>
+    <td>{{ contact.telephone }}</td>
+    
+ </tr>
+</tbody>
+</table>    
+</div>
+</div>
+</body>
+</html>

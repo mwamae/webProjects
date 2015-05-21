@@ -1,0 +1,11 @@
+{
+  "name": "grunt",
+  "version": "1.0.0",
+  "description": "gruntfile",
+  "main": "index.js",
+  "scripts": {
+    "test": "ok"
+  },
+  "author": "Michael",
+  "license": "ISC"
+}

@@ -1,0 +1,47 @@
+{
+"details": [
+  
+  {
+    "firstName" : "Michael",
+    "lastName" : "Wamae",
+    "email" : "michael@cytonn.com",
+    "telephone":"988953989"
+  },
+   {
+    "firstName" : "Alex",
+    "lastName" : "Wamae",
+    "email" : "alexngugi@gmail.com",
+    "telephone":"988953989"
+  },
+   {
+    "firstName" : "Mercy",
+    "lastName" : "Wangila",
+    "email" : "mercy@123.com",
+    "telephone":"988953989"
+  },
+   {
+    "firstName" : "Hellen",
+    "lastName" : "Wairimu",
+    "email" : "hellenwairimu@hotmail.com",
+    "telephone":"988953989"
+  },
+   {
+    "firstName" : "Willium",
+    "lastName" : "Gitonga",
+    "email" : "willyg@gmail.com",
+    "telephone":"988953989"
+  },
+   {
+    "firstName" : "Margaret",
+    "lastName" : "Njoki",
+    "email" : "margaretnjoki@yahoo.com",
+    "telephone":"988953989"
+  },
+   {
+    "firstName" : "Wilfred",
+    "lastName" : "Mbugua",
+    "email" : "wilfredmbugus@yahoo.com",
+    "telephone":"988953989"
+  }
+]
+}
