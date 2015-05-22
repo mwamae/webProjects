@@ -1,28 +1,41 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Contacts App</title>
+        <title>jQuery Test</title>
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
-        <script type="text/javascript" src="controller.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script type="text/javascript" src="main.js"></script>
     </head>
-    <body ng-app="myApp" ng-controller="myCtrl">
+    <body>
         <div class="container">
-            <h1>Contacts App</h1>
-        <div class="row">
-            <div class="col-xs-6 col-sm-4 col-md-4">First Name :<input type="text" ng-model = "firstName"> </div> 
-            <div class="col-xs-6 col-sm-4 col-md-4">Last Name :<input type="text" ng-model = "lastName"> </div>
-            <div class="col-xs-6 col-sm-4 col-md-4">Phone No. :  <input type= "text"  ng-model = "cellPhone"> </div>
-            <div class="col-xs-6"><button class="btn btn-success" ng-click = "submitForm()">New</button></div>
-        </div>
-       <table class = "table table-striped">
-       <tr ng-repeat="x in data">
-       <td >{{x.firstName}}</td>
-       <td >{{x.lastName}}</td>
-       <td >{{x.cellPhone}}</td>
-       <td ><button class="btn btn-danger btn-small" ng-click="remove($index)">Delete</button></td>
-       </tr>
-       </table>
+            <h1>Our Products</h1>
+            <div class="row">
+                <div class="col-xs-4"><input id="code" type="text" placeholder="Product Code"> </div> 
+                <div class="col-xs-4"><input id="name" type="text" placeholder="Product Name"> </div>
+                <div class="col-xs-4"><input id="mininv" type= "text" placeholder="Minimum Investiment"> </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-xs-4"><input id="minret" type= "text" placeholder="Minimum Returns(%)"></div>
+                <div class="col-xs-4"><input id="maxret" type= "text" placeholder="Maximum Returns(%)"></div>
+                <div class="col-xs-4"><button id="submit" class="btn btn-success">Submit</button></div>
+            </div>
+        <table id='products' class = "table table-striped">
+            <thead> 
+                <tr>
+                    <th>Product Code</th>
+                    <th>Product Name</th>
+                    <th>Min Investments</th>
+                    <th>Min Returns(%)</th>
+                    <th>Max Returns(%)</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+            <tbody>
+               
+            </tbody>
+        </table>
+        <button class="edit">Edit</button>&nbsp;&nbsp;<button class="delete">Delete</button>
        </div>
     </body>
 </html>
