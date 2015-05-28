@@ -1,0 +1,6 @@
+{
+    "require": {
+        "vendor-name/package-name": "version e.g. 10.1.*"
+    }
+}
+

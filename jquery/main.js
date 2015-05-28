@@ -9,9 +9,9 @@ $(document).ready(function(){
          removeRow(td);
     });
      
-          $('.table').on('click', '.row', function(){
-         //var td=$(this).;
-         loadData(td);
+          $('.table').on('click', '.edit', function(){
+         var tr=$(this).parent().parent();
+         loadData(tr);
     });
 
     
@@ -34,8 +34,9 @@ $(document).ready(function(){
     function removeRow(td) {
         td.parent().remove();
     }
-    function loadData(){
-      //  $('#code').val()=td.
+    function loadData(tr){
+      // $('#code').val()=$(tr).;
+      
     }
     
  });

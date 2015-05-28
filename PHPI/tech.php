@@ -6,6 +6,7 @@ class Staff {
     private $lastName ='';
     private $project = '';
     private $spec ='';
+    private $connection;
     
     function __construct($firstname, $lastname, $pro, $spc){
         
@@ -13,16 +14,25 @@ class Staff {
         $this->lastName = $lastname;
         $this->project = $pro;
         $this->spec = $spc;
+        $this->connection= new Database();
     }
-    public function add(){
+    public function addDatabase(){
         
-        $connection = new Database();
         $this->connection->db_connect(); 
-        $this->connection->addStaff($this->fistName, $this->lastName, $this->project, $this->spec);
+        $this->connection->addStaff($this->firstName, $this->lastName, $this->project, $this->spec);
         
     }
-    public function get(){
+    public function getStaff(){
         $connection->showStaff();
+    }
+    public function addStaff(){
+        
+    }
+    public function editStaff(){
+        
+    }
+    public function deleteStaff(){
+        
     }
     
 }
