@@ -11,7 +11,7 @@
             <li><a href="./contact">Contact</a></li>
         </ul>
 
-        @yield('content');
+        @yield('content')
 
         Company, {{ date('Y') }}
 

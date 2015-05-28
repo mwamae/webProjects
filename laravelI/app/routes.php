@@ -14,15 +14,22 @@
 Route::get('/', function()
 {
     //Return a string of to the page
-	return 'Home page';
+	return View::make('home');
 });
 
 Route::get('services', function()
 {
-    return 'Services page';
+    //Retrieve all services from the service table
+    $services=Service::all();
+    //pass the variable containing services to the service template
+
+    return View::make('services', array('services'=>$services));
 });
 
 Route::get('contact', function()
 {
-    return 'Contact Page';
+    return View::make('contact');
+});
+Route::post('contact',function(){
+    return 'Message has been sent. Thank you for contacting us';
 });
