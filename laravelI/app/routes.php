@@ -31,5 +31,32 @@ Route::get('contact', function()
     return View::make('contact');
 });
 Route::post('contact',function(){
+    //Gather all user input
+    $input = Input::all();
+
+    //create validation rules
+    $rules= array(
+        'subject'=>'required',
+        'message'=>'required'
+    );
+
+    //apply validation rules to the input
+    $validator=Validator::make($input,$rules);
+
+    //Go back to contact form with the user input
+
+    if($validator->fails()) {
+        return Redirect::to('contact')->withErrors($validator)->withInput();
+    }
+    $data=array(
+        'subject'=>$input['subject'],
+        'request'=>$input['message']
+    );
+
+    //use Mail::send method to send the mail template
+    Mail::send('emails.contact',$data,function($message){
+        $message->to('michaelkariuki29@gmail.com','Cytonn Technologies')
+            ->subject('Contact Request');
+    });
     return 'Message has been sent. Thank you for contacting us';
 });
